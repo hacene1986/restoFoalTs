@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "3e94edf0-a8c2-4c7d-a364-a2eaf26b59c9",
+		"name": "restoFoalTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/api/resto/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Burgers\",\r\n    \"street\": \"22 rue carnot\",\r\n    \"zipCode\": \"93200\",\r\n    \"city\": \"saint denis\"\r\n  \r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/resto/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"resto",
+						"list"
+					]
+				},
+				"description": "afficher les restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/resto/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"food\",\r\n    \"street\": \"22 rue suger\",\r\n    \"zipCode\": \"91120\",\r\n    \"city\": \"palaiseau\"\r\n  \r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/resto/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"resto",
+						"add"
+					]
+				},
+				"description": "ajout table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/table/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberTable\": 1,\r\n    \"numberCouvert\": 2\r\n   \r\n  \r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/table/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"table",
+						"list"
+					]
+				},
+				"description": "liste des tables"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/table/list/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberTable\": 1,\r\n    \"numberCouvert\": 2\r\n   \r\n  \r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/table/list/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"table",
+						"list",
+						"1"
+					]
+				},
+				"description": "liste table par resto"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/table/nbCouverts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberTable\": 1,\r\n    \"numberCouvert\": 2\r\n   \r\n  \r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/table/nbCouverts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"table",
+						"nbCouverts"
+					]
+				},
+				"description": "nombre de couverts"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"add"
+					]
+				},
+				"description": "ajout reservation"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"list"
+					]
+				},
+				"description": "liste reservations"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/list/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/list/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"list",
+						"1"
+					]
+				},
+				"description": "liste reservation par resto"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/list/date/2019-02-05",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/list/date/2019-02-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"list",
+						"date",
+						"2019-02-05"
+					]
+				},
+				"description": "liste reservation par date "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/2019-02-07/false/true",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/2019-02-07/false/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"2019-02-07",
+						"false",
+						"true"
+					]
+				},
+				"description": "nombre de couverts date midi soir"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/table/2019-02-07/false/true/jean",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/table/2019-02-07/false/true/jean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"table",
+						"2019-02-07",
+						"false",
+						"true",
+						"jean"
+					]
+				},
+				"description": "numéro de table d'une reservation "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/reservation/clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dateTime\": \"2019-02-05\",\n\t\"midi\": false,\n\t\"soir\": true,\n\t\"table\": \"1\",\n\t\"nbCouverts\": 2,\n\t\"nameClient\": \"baba\",\n\t\"tel\": \"0609528497\",\n\t\"resto\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/reservation/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"reservation",
+						"clients"
+					]
+				},
+				"description": "afficher les noms des clients"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/table/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberTable\": 2,\r\n    \"numberCouvert\": 4,\r\n    \"resto\": 1\r\n  \r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/table/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"table",
+						"add"
+					]
+				},
+				"description": "ajout table"
+			},
+			"response": []
+		}
+	]
+}
